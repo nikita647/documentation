@@ -133,7 +133,7 @@ ___
 ___
 
 ## Conclusion
-Rolling deployment is an effective strategy for updating applications with minimal risk and downtime. By following the outlined process and best practices, you can achieve smooth and reliable deployments.
+Rolling deployment is a highly effective strategy for updating applications while minimizing risk and downtime. By following the outlined process and best practices, you can achieve smooth and reliable deployments.
 
 
 
@@ -142,6 +142,6 @@ Rolling deployment is an effective strategy for updating applications with minim
 
 | Links | Descriptions | 
 |--------|------------|
-| Rolling Blog |  | 
+| Rolling Blog | https://launchdarkly.com/blog/blue-green-deployments-versus-rolling-deployments/ | 
 | Rolling deployments |https://octopus.com/devops/software-deployments/rolling-deployment/ | 
 | Kubernetes Rolling Updates |https://kubernetes.io/docs/concepts/workloads/controllers/deployment/| 
