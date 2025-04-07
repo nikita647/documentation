@@ -62,7 +62,7 @@ The purpose of this documentation is to provide a comprehensive guide on impleme
 ## Rolling Deployment workflow
 ![rolling-deployment](https://github.com/user-attachments/assets/17e2c48f-fe65-4681-8e8d-94c42d73bf53)
 
-##  Steps By Step processs
+##  Step By Step processs
 
 #### 1. Prepare the New Version
 - Build and verify the new application version.
@@ -80,30 +80,15 @@ The purpose of this documentation is to provide a comprehensive guide on impleme
 - Validate that each updated server is healthy and functioning as expected.
 - Continue only if the updated instance passes all necessary checks.
 
-#### 5. Monitor in Real-Time
-- Track key metrics like latency, error rates, and resource usage.
-- If abnormalities are detected, pause or roll back the deployment.
+#### 5. Monitor Performance
+- Monitor application performance metrics during the deployment (e.g., response time, error rate).
+- Roll back the deployment if any issues are detected.
 
-#### 6. Finalize Deployment
-- Once all servers are successfully updated and stable, conclude the rollout.
-- Perform end-to-end validation and continue monitoring for any post-deployment issues.
-
-
+#### 6. Complete the Rollout
+- Once all servers are updated, consider the deployment complete.
+- Perform post-deployment testing and monitoring.
 
 
-## **Best Practices**
-
-| **Practice**              | **Description**                                                                 |
-|---------------------------|---------------------------------------------------------------------------------|
-| **Incremental Updates**   | Deploy updates in small batches to minimize downtime.                          |
-| **Load Balancing**        | Use load balancers to redirect traffic away from servers being updated.         |
-| **CI/CD Pipelines**       | Implement continuous integration and continuous deployment pipelines.          |
-| **Health Checks**         | Implement readiness and liveness probes to verify instance health.             |
-| **Monitoring & Alerts**   | Use tools like Prometheus or Datadog to monitor deployments and alert on issues.|
-| **Canary Deployments**    | Release changes to a small set of users first to catch issues early.           |
-| **Rollback Mechanism**    | Ensure you can quickly roll back to a stable version in case of failure.       |
-| **Secrets Management**    | Use tools like HashiCorp Vault or AWS Secrets Manager to secure sensitive data.|
-| **Auto-Scaling Support**  | Design rolling deployments to work with auto-scaling groups.                   |
 
 
 ## **Tools and Technologies**
@@ -116,20 +101,36 @@ The purpose of this documentation is to provide a comprehensive guide on impleme
 | **Jenkins**  | Continuous integration and continuous deployment server.              |
 | **Prometheus** | Monitoring and alerting toolkit for system and application metrics.        |
 | **Grafana**    | Visualization tool often used with Prometheus for monitoring dashboards.   |
-| **Vault**      | Tool for managing secrets and protecting sensitive data in deployments.    |
 | **Terraform**  | Infrastructure as Code (IaC) tool for provisioning cloud infrastructure.    |
 
+___
+
+##  Advantages vs  Disadvantages
+
+| **Advantages**                              | **Disadvantages**                                                                 |
+|---------------------------------------------|-----------------------------------------------------------------------------------|
+|  Zero downtime                             |  Slower overall deployment process                                               |
+|  Can rollback quickly if failure occurs    |  Compatibility issues between old and new versions during rollout               |
+|  Only a portion of traffic is affected     |  Monitoring and debugging can be complex                                        |
+|  Reduces risk by updating incrementally    |  Requires robust health checks (readiness/liveness probes)                      |
+| Ensures continuous availability           |  Not ideal for major version changes with breaking dependencies                 |
+| Good for large-scale systems              |  May need careful state management for session-based applications               |
+
+___
 
 ## Best Practices
 
 | **Best Practice**        | **Description**                                                                 |
 |---------------------------|---------------------------------------------------------------------------------|
 | **Test Thoroughly**       | Ensure comprehensive testing before deployment.                                |
+| **Incremental Updates**   | Deploy updates in small batches to minimize downtime.                          |
+| **Load Balancing**        | Use load balancers to redirect traffic away from servers being updated.         |
 | **Monitor Continuously**  | Keep an eye on the deployment process and application performance.             |
-| **Rollback Plan**         | Have a rollback plan in case of any issues during deployment.                  |
+| **Rollback Mechanism**    | Ensure you can quickly roll back to a stable version in case of failure.       |
 | **Communication**         | Maintain clear communication with the team throughout the deployment process.  |
-| **Integrate Load Balancers**   | Use load balancers to direct traffic only to healthy instances.            |
+| **Auto-Scaling Support**  | Design rolling deployments to work with auto-scaling groups.                   |
 
+___
 
 ## Conclusion
 Rolling deployment is an effective strategy for updating applications with minimal risk and downtime. By following the outlined process and best practices, you can achieve smooth and reliable deployments.
