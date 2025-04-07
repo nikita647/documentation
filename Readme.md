@@ -1,6 +1,9 @@
 # Documentation on Rolling Deployment
 
 
+| **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
+|------------|---------------------------|-------------|----------------|-----|-------------|-------------| 
+| Nikita Joshi|   8-04-2025          | v1          | Nikita Joshi   |8-04-2025    |  Internal Reviewer | Komal Jaiswal |
 
 
 
@@ -136,7 +139,11 @@ ___
 Rolling deployment is a highly effective strategy for updating applications while minimizing risk and downtime. By following the outlined process and best practices, you can achieve smooth and reliable deployments.
 
 
+### **Contact Information**
 
+| **Name** | **Email address**            | **Github ID**
+|----------|-------------------------------|-------------------|
+| Nikita joshi    |  jnikita647@gmail.com   | https://github.com/jnikita19  |
 
 ## References
 
