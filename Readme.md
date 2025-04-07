@@ -142,6 +142,6 @@ Rolling deployment is an effective strategy for updating applications with minim
 
 | Links | Descriptions | 
 |--------|------------|
-| Rolling Blog | | 
+| Rolling Blog |  | 
 | Rolling deployments |https://octopus.com/devops/software-deployments/rolling-deployment/ | 
-| Kubernetes Rolling Updates | https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/ | 
+| Kubernetes Rolling Updates |https://kubernetes.io/docs/concepts/workloads/controllers/deployment/| 
