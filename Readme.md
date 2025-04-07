@@ -22,7 +22,7 @@
 
 ## Introduction
 
-A rolling deployment is a software release strategy where instances of the old version of an application are gradually replaced with instances of the new version. This approach ensures continuous availability with no downtime.
+Rolling deployments are a software release strategy where new versions of an application are incrementally deployed to a subset of servers or instances. This process allows for a gradual rollout, reducing the risk of widespread issues caused by new releases. Instead of updating all instances at once, a rolling deployment updates a few at a time. This ensures that some instances continue running the old version while the new version is being deployed.
 
 ## Purpose
 The purpose of this documentation is to provide a comprehensive guide on implementing rolling deployments. It covers the process, best practices, tools, and real-world examples to help you execute smooth and efficient rolling deployments.
@@ -142,6 +142,6 @@ Rolling deployment is an effective strategy for updating applications with minim
 
 | Links | Descriptions | 
 |--------|------------|
-| Rolling Blog | https://www.techtarget.com/searchitoperations/definition/rolling-deployment | 
-| Rolling deployments | https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/rolling-deployments.html | 
+| Rolling Blog | | 
+| Rolling deployments |https://octopus.com/devops/software-deployments/rolling-deployment/ | 
 | Kubernetes Rolling Updates | https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/ | 
