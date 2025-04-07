@@ -7,9 +7,7 @@
 
 
 
-
-
-## Table of Contents
+## **Table of Contents**
 
 - [Introduction](#introduction)
 - [Purpose](#purpose)
@@ -17,21 +15,25 @@
 - [Rolling Deployment Process](#rolling-deployment-process)
 - [Rolling Deployment workflow](#rolling-deployment-workflow)
 - [Tools and Technologies](#tools-and-technologies)
+- [Advantages vs  Disadvantages](#advantages-vs--disadvantages)
 - [Best Practices](#best-practices)
 - [Conclusion](#conclusion)
 - [Contact information](#contact-information)
 - [References](#references)
 
 
-## Introduction
+## **Introduction**
 
 Rolling deployments are a software release strategy where new versions of an application are incrementally deployed to a subset of servers or instances. This process allows for a gradual rollout, reducing the risk of widespread issues caused by new releases. Instead of updating all instances at once, a rolling deployment updates a few at a time. This ensures that some instances continue running the old version while the new version is being deployed.
 
-## Purpose
+___
+
+## **Purpose**
 The purpose of this documentation is to provide a comprehensive guide on implementing rolling deployments. It covers the process, best practices, tools, and real-world examples to help you execute smooth and efficient rolling deployments.
 
+___
 
-## Features
+## **Features**
 
 | Feature               | Description                                                          |
 |-----------------------|----------------------------------------------------------------------|
@@ -41,8 +43,9 @@ The purpose of this documentation is to provide a comprehensive guide on impleme
 | **Automated Deployment** | Use automation tools to streamline the deployment process.            |
 | **Health-Driven Updates** | Updates only proceed if the updated instance passes all defined health and readiness checks. |
 
+___
 
-## Rolling Deployment Process
+## **Rolling Deployment Process**
 
 - ### Preparation
 
@@ -62,7 +65,9 @@ The purpose of this documentation is to provide a comprehensive guide on impleme
 | **Monitoring**       | Continuously monitor the deployment process for any issues.          |
 | **Completion**       | Continue the process until all servers are running the new version.  |
 
-## Rolling Deployment workflow
+___
+
+## **Rolling Deployment workflow**
 ![rolling-deployment](https://github.com/user-attachments/assets/17e2c48f-fe65-4681-8e8d-94c42d73bf53)
 
 ##  Step By Step processs
@@ -92,7 +97,7 @@ The purpose of this documentation is to provide a comprehensive guide on impleme
 - Perform post-deployment testing and monitoring.
 
 
-
+___
 
 ## **Tools and Technologies**
 
@@ -108,7 +113,7 @@ The purpose of this documentation is to provide a comprehensive guide on impleme
 
 ___
 
-##  Advantages vs  Disadvantages
+##  **Advantages vs  Disadvantages**
 
 | **Advantages**                              | **Disadvantages**                                                                 |
 |---------------------------------------------|-----------------------------------------------------------------------------------|
@@ -121,7 +126,7 @@ ___
 
 ___
 
-## Best Practices
+## **Best Practices**
 
 | **Best Practice**        | **Description**                                                                 |
 |---------------------------|---------------------------------------------------------------------------------|
@@ -135,9 +140,10 @@ ___
 
 ___
 
-## Conclusion
+## **Conclusion**
 Rolling deployment is a highly effective strategy for updating applications while minimizing risk and downtime. By following the outlined process and best practices, you can achieve smooth and reliable deployments.
 
+___
 
 ### **Contact Information**
 
@@ -145,7 +151,9 @@ Rolling deployment is a highly effective strategy for updating applications whil
 |----------|-------------------------------|-------------------|
 | Nikita joshi    |  jnikita647@gmail.com   | https://github.com/jnikita19  |
 
-## References
+___
+
+## **References**
 
 | Links | Descriptions | 
 |--------|------------|
