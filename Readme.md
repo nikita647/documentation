@@ -121,15 +121,12 @@ The purpose of this documentation is to provide a comprehensive guide on impleme
 | **Monitor Continuously**  | Keep an eye on the deployment process and application performance.             |
 | **Rollback Plan**         | Have a rollback plan in case of any issues during deployment.                  |
 | **Communication**         | Maintain clear communication with the team throughout the deployment process.  |
+| **Integrate Load Balancers**   | Use load balancers to direct traffic only to healthy instances.            |
 
 ## Conclusion
 Rolling deployment is an effective strategy for updating applications with minimal risk and downtime. By following the outlined process and best practices, you can achieve smooth and reliable deployments.
 
 
-## Contact information
-|    NAME           |   Email Address                       |
-|:-----------------:|:-------------------------------------:|
-|Pritam Kondapratiwar| 	pritam.pratiwar.snaatak@mygurukulam.co
 
 
 ## References
