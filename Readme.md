@@ -1,5 +1,7 @@
 # Documentation on Rolling Deployment
 
+![image](https://github.com/user-attachments/assets/34a10d5f-46b5-490a-b736-cd43d8f2f137)
+
 
 | **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
 |------------|---------------------------|-------------|----------------|-----|-------------|-------------| 
