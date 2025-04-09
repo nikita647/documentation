@@ -1,6 +1,8 @@
 # POC of Middleware Monitoring
 
 
+<img src="https://github.com/user-attachments/assets/e0495a0e-f0f7-4179-8a7f-c6e5031b1be3" width="700" /> <br>
+
 
 | **Author** | **Created on** | **Version** | **Last updated by**|**Last Edited On**|**Level** |**Reviewer** |
 |------------|---------------------------|-------------|----------------|-----|-------------|-------------| 
