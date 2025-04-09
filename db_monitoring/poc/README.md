@@ -188,6 +188,7 @@ sudo systemctl enable grafana-server
 
 
 ## Download and Install Redis Exporter
+
 Install the Redis exporter:
 ```
 curl -s https://api.github.com/repos/oliver006/redis_exporter/releases/latest | grep browser_download_url | grep linux-amd64 | cut -d '"' -f 4 | wget -qi -
@@ -204,6 +205,8 @@ Confirm the installation:
 ```
 redis_exporter --version
 ```
+
+
 ## Configuring Redis Exporter Service
 Create a service for the Redis exporter:
 ```
@@ -212,14 +215,22 @@ sudo vim /etc/systemd/system/redis_exporter.service
 Add the following content toredis_exporter.service
 ```
 [Unit]
-Description=Redis Exporter for Prometheus
+Description=Prometheus
 Wants=network-online.target
 After=network-online.target
 
 [Service]
+Type=simple
 User=prometheus
 Group=prometheus
-ExecStart=/usr/local/bin/redis_exporter
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=/usr/local/bin/redis_exporter \
+  --log-format=txt \
+  --namespace=redis \
+  --web.listen-address=:9121 \
+  --web.telemetry-path=/metrics
+
+SyslogIdentifier=redis_exporter
 Restart=always
 
 [Install]
@@ -233,17 +244,25 @@ sudo systemctl enable redis_exporter
 sudo systemctl start redis_exporter
 ```
 Confirm the service status:
-***
-<img width="953" alt="image-5" src="https://github.com/user-attachments/assets/dc7e75ae-7a60-415d-abf8-f707ea47530e" />
 
-***
 
 
 
 ## Configuring Redis Exporter Endpoint in Prometheus Configuration
-<img width="1028" alt="Screenshot 2025-01-14 at 10 11 40 PM" src="https://github.com/user-attachments/assets/7823fa6e-9150-4efb-bc17-99ccad5b5980" />
 
+Lets update our configuration file using below command:
 
+``` bash
+sudo nano /etc/prometheus/prometheus.yml
+
+```
+```
+#Redis Servers
+  - job_name: "redis"
+    static_configs:
+      - targets: ["localhost:9121"]
+
+```
 
 Save the file and restart the Prometheus service:
 ```
@@ -251,14 +270,19 @@ sudo systemctl restart prometheus.service
 ```
 
 
+![image](https://github.com/user-attachments/assets/edc2a562-805c-42f9-8df1-29dc9eabbddf)
+
 
 ## Grafana Dashboards for Redis Metrics
+![image](https://github.com/user-attachments/assets/69be7d63-92cb-49f1-8b10-f6c688285744)
 
-<img width="1674" alt="Screenshot 2025-01-14 at 10 15 03 PM" src="https://github.com/user-attachments/assets/81b7c2fb-077d-4884-ae7a-565a74035fc5" />
+![image](https://github.com/user-attachments/assets/24040994-043f-4400-ad6d-12594e68da07)
+
+![image](https://github.com/user-attachments/assets/1f6a1679-00f5-4b15-a4f4-987939c40617)
 
 
 ## Cheack Prometheus Dashboards status traget
-<img width="1679" alt="Screenshot 2025-01-14 at 10 15 52 PM" src="https://github.com/user-attachments/assets/9ab20176-3ee5-419e-92d9-fc337fb625b5" />
+![image](https://github.com/user-attachments/assets/042fa96b-2a5e-4066-959d-4e75e69fb548)
 
 
 ## Best practices
