@@ -176,26 +176,34 @@ sudo systemctl restart prometheus.service
 
 
 
-
+___
 ## Step 8. Setting up Grafana Dashboards for Redis Metrics
 
 - go to the Connections and select the Data sources option.
 
 ![image](https://github.com/user-attachments/assets/478be982-e4c8-4f94-a88d-54726baa63ae)
 
+___
+
 - Search for Prometheus in the search bar and select it.
 
 ![image](https://github.com/user-attachments/assets/00531fd9-f75e-4617-9db6-4dccefe18b7c)
+
+___
 
 - In connection, in Prometheus server URL, give the server url on which our prometheus is running.
 
 
 ![image](https://github.com/user-attachments/assets/d321d584-0774-4893-9d18-04556296f6b7)
 
+___
+
 - After this click on save and test button. You will see the message for prometheus being successfully queried.
 
 
 ![image](https://github.com/user-attachments/assets/a94f3bac-9563-4025-9f5b-2d92db789d8d)
+
+___
 
 - Here you can start your own new dashboard by adding a visualization.
 
@@ -206,32 +214,37 @@ sudo systemctl restart prometheus.service
 
 ![image](https://github.com/user-attachments/assets/3fe72a54-0383-43a3-9341-993d6946ae6e)
 
+___
+
 
 ![image](https://github.com/user-attachments/assets/21b35188-1331-4ede-a719-300741748d38)
 
+___
 
-- Now in the Query section add the A query
+
+-  **Query section add the A query**
 
 go_gc_duration_seconds_sum
 instance: localhost:9090
 
+![image](https://github.com/user-attachments/assets/936d7c6c-1973-4ac7-88b4-aa704db34a28)
 
-![image](https://github.com/user-attachments/assets/69be7d63-92cb-49f1-8b10-f6c688285744)
+___
 
-![image](https://github.com/user-attachments/assets/24040994-043f-4400-ad6d-12594e68da07)
-
-![image](https://github.com/user-attachments/assets/1f6a1679-00f5-4b15-a4f4-987939c40617)
-
-then add the B query
+- **add the B query**
 
 Metric: redis_cpu_user_seconds_total
 job: redis
-![image](https://github.com/user-attachments/assets/936d7c6c-1973-4ac7-88b4-aa704db34a28)
-
-
 ![Screenshot 2025-04-09 142402](https://github.com/user-attachments/assets/e0f927b8-206e-4a03-b8ed-4634a76c0dc9)
 
-## Cheack Prometheus Dashboards status traget
+___
+
+
+![image](https://github.com/user-attachments/assets/1f6a1679-00f5-4b15-a4f4-987939c40617)
+
+___
+
+##  **Prometheus Dashboards status target**
 ![image](https://github.com/user-attachments/assets/042fa96b-2a5e-4066-959d-4e75e69fb548)
 
 
