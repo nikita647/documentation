@@ -262,8 +262,11 @@ In conclusion, implementing a monitoring solution for Redis databases using Prom
 
 ## Reference Links
 
-[Middleware Monitoring Documentation]()
 
-[Monitoring Dashboard Design]()
+| **Links**                                           | 
+|-----------------------------------------------------|
+| [Redis monitoring guide](https://www.site24x7.com/learn/redis-monitoring-metrics.html)  | 
+| [What are Hit and Miss Ratios?](https://wp-rocket.me/blog/calculate-hit-and-miss-ratios/) | 
+|[Middleware Monitoring Documentation](https://github.com/snaatak-Zero-Downtime-Crew/Documentation/blob/Sheetal-SCRUM-411/Design%20Monitoring/Middleware/Key%20Performance%20Metrices/README.md)|
 
 
