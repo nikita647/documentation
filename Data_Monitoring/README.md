@@ -59,6 +59,7 @@ This documentation will guide you through the process of designing an effective 
 
 ## Flow Chart
 
+![image](https://github.com/user-attachments/assets/5bc40d7f-6e26-45ae-9e28-95015d6ebcf3)
 
 
 ## Best Practices
